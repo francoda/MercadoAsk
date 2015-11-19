@@ -1,0 +1,9 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Macro</h1>
+    <button class="button button-clear" ng-click="modal.hide()">Cancelar</button>
+  </ion-header-bar>
+  <ion-content>
+    <macro-input name="{{macro.name}}" txt="{{macro.txt}}" callback="save"/>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,20 @@
+<ion-view view-title="Preguntas">
+  <ion-content>
+    <ion-list>
+      <div>
+        <label class="item item-input">
+          <i class="placeholder-icon"></i>
+          <input type="text" placeholder="Search" ng-model="search.txt">
+        </label>
+        <button class="button button-full button-positive" ng-click="search.search(search.txt)">
+          DALE
+        </button>
+      </div>
+      <ion-item class="item-thumbnail-left" ng-repeat="item in search.productos">
+        <img ng-src="{{item.thumbnail}}">
+        <h2>{{::item.title}}</h2>
+        <h2>{{::item.seller.id}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

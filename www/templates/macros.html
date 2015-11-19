@@ -1,0 +1,20 @@
+<ion-view view-title="Macros">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-plus-empty" ng-click="add()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="macro in macros" ng-click="edit(macro)">
+        <h2>{{macro.name}}</h2>
+        <p>{{macro.txt}}</p>
+        <ion-option-button class="button-assertive icon ion-ios-minus-empty" ng-click="remove(macro)">
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
